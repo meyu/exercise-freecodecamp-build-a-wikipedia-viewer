@@ -1,0 +1,101 @@
+/* 基本佈局 */
+html, body {
+	height: 100vh;
+	background-color: #3e2723;
+}
+.supriseMe, .author {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.author {
+	left: 0;
+}
+
+/* 卡片特效 */
+.searchmatch {
+	text-shadow: 2px 1px 1px #3e2723;
+}
+.card {
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: auto 100%;
+}
+.card-content {
+	text-shadow: 1px 1px 1px #3e2723;
+	background: -webkit-linear-gradient(
+		right,
+		rgba(161, 136, 127, 1) 60%,
+		rgba(161, 136, 127, 0) 100%
+	); /*Safari 5.1-6*/
+	background: linear-gradient(
+		to right,
+		rgba(161, 136, 127, 1) 60%,
+		rgba(161, 136, 127, 0) 100%
+	); /*Standard*/
+}
+
+/* 輸入區的捲動佈局 */
+header .row, input {
+	margin-bottom: 0 !important;
+}
+main {
+	padding-top: 42vh;
+}
+header {
+	width: 100%;
+	height: 40vh;
+	z-index: 999;
+	position: fixed;
+	-webkit-transition: height 0.4s;
+	transition: height 0.4s;
+}
+header.shy {
+	height: 70px;
+}
+#iconSearch {
+	font-size: 5rem;
+	margin-left: -20px;
+	-webkit-transition: font-size 0.5s, margin-left 0.5s;
+	transition: font-size 0.5s, margin-left 0.5s;
+}
+#iconSearch.shy {
+	font-size: 3rem;
+	margin-left: 0px;
+}
+
+/* Modals 微調*/
+.bottom-sheet, .modal-content {
+	max-height: 75vh !important;
+	height: 75vh !important;
+	padding: 0 !important;
+}
+iframe {
+	width: 100%;
+	height: 99%;
+	border-style: none;
+}
+.progress {
+	position: absolute;
+	top: 0;
+}
+
+/* 搜尋框色調微調 */
+.input-field input[type=text]:focus + label {
+	color: #fff;
+}
+.input-field input[type=text]:focus {
+	border-bottom: 1px solid #fff;
+	box-shadow: 0 1px 0 0 #fff;
+}
+.input-field input[type=text].valid {
+	border-bottom: 1px solid #fff;
+	box-shadow: 0 1px 0 0 #fff;
+}
+.input-field input[type=text].invalid {
+	border-bottom: 1px solid #fff;
+	box-shadow: 0 1px 0 0 #fff;
+}
+.input-field .prefix.active {
+	color: #fff;
+}

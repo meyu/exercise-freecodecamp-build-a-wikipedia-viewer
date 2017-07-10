@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title> exercise@freeCodeCamp: Build a Wikipedia Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <!-- 操作區 -->
+<header class="col valign-wrapper z-depth-5 brown lighten-4">
+
+ <!-- 輸入區 -->
+ <div class="row">
+  <div class="input-field col s8">
+   <i id="iconSearch" class="material-icons prefix">search</i>
+   <input id="keyword" class="h2" type="text">
+   <label for="keyword">Search Wikipedia</label>
+  </div>
+  <div class="input-field col s4">
+   <select id="lang"></select>
+  </div>
+ </div>
+
+ <!-- 補充資訊區 -->
+ <div class="author moreInfo">
+  <a id="demoGist" href="#showDetail" class="waves-effect waves-light btn-flat" 
+		 data-title="Wikipedia Viewer" data-url="">
+   <i class="material-icons">code</i></a>
+ </div>
+ <div class="supriseMe moreInfo">
+  <a id="ranWiki" href="#showDetail" class="waves-effect waves-light btn-flat" 
+		 data-title="random article" data-url="">
+			suprise me</a>
+ </div>
+
+</header>
+
+<!-- 資料區 -->
+<main>
+ <div id="result"></div>
+</main>
+
+<!-- 預覽 -->
+<div id="showDetail" class="modal bottom-sheet">
+ <div class="modal-content">
+
+  <!-- Preloader -->
+  <div class="progress" style="display:none;">
+   <div class="indeterminate"></div>
+  </div>
+
+  <!-- wiki preview -->
+  <iframe id="showWiki" style="display:none;" src=""></iframe>
+
+  <!-- my code gist -->
+  <div id='myGist' style="display:none;">
+   <script type="text/javascript" src="//gist.github.com/meyu/21c1a268b2504e6d2c416605b8be4b5b.js"></script>
+  </div>
+
+  <!-- Fixed Action Button -->
+  <div class="fixed-action-btn">
+   <a class="btn-floating btn-large red" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">
+    <i class="large material-icons">menu</i>
+   </a>
+   <ul>
+    <li>
+     <a class="btn-floating brown lighten-4 modal-action modal-close tooltipped" data-position="left" data-tooltip="close">
+      <i class="material-icons">close</i>
+     </a>
+    </li>
+    <li>
+     <a id="tweetMe" class="btn-floating light-blue accent-2 tooltipped" style="display:none;" data-position="left" data-tooltip="tweet this page" target="_blank" href="">
+      <i class="fa fa-twitter" aria-hidden="true"></i>
+     </a>
+    </li>
+    <li>
+     <a id="openMe" class="btn-floating orange accent-2 tooltipped" style="display:none;" data-position="left" data-tooltip="open this page" target="_blank" href="">
+      <i class="material-icons">open_in_new</i>
+     </a>
+    </li>
+   </ul>
+  </div>
+
+ </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
